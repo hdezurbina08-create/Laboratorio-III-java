@@ -4,6 +4,7 @@
  */
 package laboratorio3.Nivel3;
 
+import java.util.ArrayList;
 /**
  *
  * @author yeimy
@@ -12,11 +13,16 @@ public class PrincipalFigura {
 
     public static void main(String[] args) {
 
-        Cuadrado cuadrado = new Cuadrado(5);
-        Circulo circulo = new Circulo(3);
+        ArrayList<Figura> figuras = new ArrayList<>();
 
-        System.out.println("Area del cuadrado: " + cuadrado.area());
-        System.out.println("Area del círculo: " + circulo.area());
+        figuras.add(new Cuadrado(5));
+        figuras.add(new Circulo(3));
+
+        for (Figura figura : figuras) {
+
+            System.out.println("Area: " + figura.area());
+
+        }
 
     }
 
