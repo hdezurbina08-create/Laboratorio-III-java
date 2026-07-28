@@ -11,16 +11,20 @@ import java.util.ArrayList;
  */
 public class PrincipalFigura {
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
 
         ArrayList<Figura> figuras = new ArrayList<>();
 
         figuras.add(new Cuadrado(5));
         figuras.add(new Circulo(3));
+        figuras.add(new Cuadrado(8));
+        figuras.add(new Circulo(6));
 
         for (Figura figura : figuras) {
 
+            System.out.println("Figura: " + figura.getClass().getSimpleName());
             System.out.println("Area: " + figura.area());
+            System.out.println("------------------------");
 
         }
 
