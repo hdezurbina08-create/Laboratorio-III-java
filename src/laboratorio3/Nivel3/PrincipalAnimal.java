@@ -4,6 +4,7 @@
  */
 package laboratorio3.Nivel3;
 
+import java.util.ArrayList;
 /**
  *
  * @author yeimy
@@ -12,9 +13,17 @@ public class PrincipalAnimal {
     
     public static void main(String[] args) {
         
-        Perro perro = new Perro();
+        ArrayList<Animal> animales = new ArrayList<>();
+
+        animales.add(new Perro());
+        animales.add(new Gato());
         
-        perro.sonido();
+         for (Animal animal : animales) {
+
+            animal.sonido();
+
+        }
+
     }
     
 }
